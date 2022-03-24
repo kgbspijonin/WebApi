@@ -1,0 +1,41 @@
+{
+    "title": "Forecast",
+    "entity": "Forecast",
+    "api": {
+      "url": "http://www.angular.at/api/forecast"
+    },
+    "filter": [
+      "cityid"
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "isId": true,
+        "type": "number",
+        "label": "Id",
+        "default": 0,
+        "control": "text"
+      },
+      {
+        "name": "date",
+        "type": "date",
+        "control": "date",
+        "label": "Date"
+      },
+      {
+        "name": "temperaturec",
+        "type": "number",
+        "label": "TemperatureC"
+      },
+      {
+        "name": "summary",
+        "type": "string",
+        "label": "To"
+      },
+      {
+        "name": "cityid",
+        "type": "number",
+        "label": "CityId"
+      }
+    ]
+}
