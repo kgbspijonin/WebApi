@@ -1,4 +1,4 @@
 export class ForecastFilter {
-    cityid : number = 0;
+    cityid : string = "";
     cityname: string = "";
 }

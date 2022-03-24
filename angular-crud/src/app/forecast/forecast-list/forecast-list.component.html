@@ -35,7 +35,7 @@
           <th class="border-top-0" scope="col">Id</th>
           <th class="border-top-0" scope="col">Date</th>
           <th class="border-top-0" scope="col">TemperatureC</th>
-          <th class="border-top-0" scope="col">Date</th>
+          <th class="border-top-0" scope="col">Summary</th>
           <th class="border-top-0" scope="col">CityId</th>
           <th class="border-top-0" scope="col" style="width:120px"></th>
         </tr>
@@ -46,7 +46,7 @@
           <td>{{item.id}}</td>
           <td>{{item.date}}</td>
           <td>{{item.temperaturec}}</td>
-          <td>{{item.date}}</td>
+          <td>{{item.summary}}</td>
           <td>{{item.cityid}}</td>
           <td style="white-space: nowrap">
             <a [routerLink]="['../forecasts', item.id ]" class="btn btn-secondary">Edit</a>&nbsp;

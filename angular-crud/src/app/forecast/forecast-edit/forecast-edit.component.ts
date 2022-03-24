@@ -50,7 +50,7 @@ export class ForecastEditComponent implements OnInit {
         this.feedback = {type: 'success', message: 'Save was successful!'};
         setTimeout(() => {
           this.router.navigate(['/forecasts']);
-        }, 1000);
+        }, 5000);
       },
       err => {
         this.feedback = {type: 'warning', message: 'Error saving'};

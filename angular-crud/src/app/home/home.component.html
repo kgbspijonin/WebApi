@@ -1,15 +1,25 @@
 <div class="card">
-  <div class="header">
+  <div [hidden]="!IsLogged" class="header">
+    <h1 class="title">Please Login or Register {{userName}}</h1>
+  </div>
+  <div [hidden]="IsLogged" class="header">
     <h1 class="title">Welcome {{userName}}</h1>
   </div>
   <div class="content">
+    <form #f="ngForm" (ngSubmit)="login()">
 
-    <div *ngIf="needsLogin" class="alert alert-warning">
-      You have been redirected to this page because you don't have the necessary
-      rights for the reqeusted action. Login with a respective user account!
-    </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input [(ngModel)]="user.username" id="username" name="username" class="form-control">
+      </div>
 
-    <button (click)="login()" class="btn btn-default">Login</button>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input [(ngModel)]="user.password" id="password" name="password" class="form-control">
+      </div>
+
+      <button (click)="login()" class="btn btn-primary">Login</button>
+    </form>
     <button (click)="logout()" class="btn btn-default">Logout</button>
 
     <!--

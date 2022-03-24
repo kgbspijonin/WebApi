@@ -18,5 +18,7 @@ namespace WebApi
 
         public DbSet<WeatherForecast> Forecasts { get; set; }
         public DbSet<City> Cities { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }
