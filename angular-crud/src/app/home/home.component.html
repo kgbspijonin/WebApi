@@ -1,8 +1,9 @@
 <div class="card">
-  <div [hidden]="!IsLogged" class="header">
-    <h1 class="title">Please Login or Register {{userName}}</h1>
+  <div [hidden]="loggedIn" class="header">
+    <h1 class="title">Please Login or Register</h1>
+    <h1 class="errormessage">{{userName}}</h1>
   </div>
-  <div [hidden]="IsLogged" class="header">
+  <div [hidden]="!loggedIn" class="header">
     <h1 class="title">Welcome {{userName}}</h1>
   </div>
   <div class="content">
@@ -18,9 +19,11 @@
         <input [(ngModel)]="user.password" id="password" name="password" class="form-control">
       </div>
 
-      <button (click)="login()" class="btn btn-primary">Login</button>
+      <button [hidden]="loggedIn" (click)="login()" class="btn btn-primary">Login</button>
     </form>
-    <button (click)="logout()" class="btn btn-default">Logout</button>
+    <button [hidden]="!loggedIn" (click)="logout()" class="btn btn-default">Logout</button>
+    <button [hidden]="loggedIn" (click)="register()" class="btn btn-secondary">Register</button>
+
 
     <!--
     <tabbed-pane [activeId]="0">

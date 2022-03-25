@@ -4,4 +4,5 @@ export class Forecast {
   summary!: string;
   date!: Date;
   cityid!: number;
+  cityname!: string;
 }
